@@ -1,0 +1,11 @@
+streamlit
+crewai
+langtrace-python-sdk
+python-dotenv
+numpy
+xml-python
+selenium
+streamlit_pdf_reader
+crewai-tools
+undetected-chromedriver
+beautifulsoup4

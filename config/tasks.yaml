@@ -1,0 +1,116 @@
+data_collection_analysis:
+  description: >
+    Gather and analyze the input data, including organization details:
+    {organization_context} and example posts.
+    Use the ScrapeLinkedinPosts Tool to collect relevant example posts with exactly these strings, "linkedin_username" as {linkedin_username} and "orglink" as {orglink}.
+    CRITICAL: DO NOT use this tool more than once.
+    Synthesize key information about the organization's posting style and content.
+    Analyze the example post for:
+    1. Tone and voice specific to {organization_name}
+    2. Any unique stylistic elements that could enhance your post
+    3. Industry-specific language or terms that might be relevant
+  expected_output: >
+    A comprehensive summary of key insights from the organization's information and posting style, including:
+    - Common themes in their posts
+    - Typical post structure
+    - Frequently used keywords or phrases
+    - Overall tone and style
+    - Analysis of the example post's tone, stylistic elements, and industry-specific language
+
+audience_profiling:
+  description: >
+    Analyze the target audiences and their interests based on the provided information.
+    You may use the SurfWeb tool to access any information required.
+    CRITICAL: DO NOT use ScrapeLinkedinPosts tool for this task.
+    Identify key demographics, preferences, and pain points of the target audience.
+    Consider how to adapt the content and language for {target_audience}, considering their professional perspective and interests.
+    Use your understanding and analytical capabilities to generate insights.
+  expected_output: >
+    Detailed profiles of target audiences, including:
+    - Demographic information (age, job roles, industries)
+    - Key interests and pain points
+    - Preferred content types and topics
+    - Engagement patterns on LinkedIn
+    - Recommendations for tailoring content to {target_audience}
+
+content_creation:
+  description: >
+    Draft the initial LinkedIn post for {organization_name} about {topic_of_interest}, formatted as a {type_of_post}.
+    Incorporate the organization's style, audience preferences, and specified topic of interest.
+    Analyze the reference post for:
+    a) Writing Style and Voice
+    b) Structure and Flow
+    c) Engagement Techniques
+    d) Professional Authenticity
+    Use these findings to guide your writing, ensuring it aligns with both the reference post's structure and {organization_name}'s voice.
+  expected_output: >
+    A draft of the LinkedIn post that includes:
+    - Compelling opening hook
+    - Clear and concise main message
+    - Relevant information about the organization
+    - Call-to-action aligned with the post type
+    - Analysis of the reference post's style, structure, engagement techniques, and authenticity
+    - A post that mirrors the reference post's style and impact while featuring original content
+
+emotional_appeal_integration:
+  description: >
+    
+    Understand provided from the reference post in {reference_post}.
+    Use the Sentiment Analysis to get an initial sentiment score of the post content.
+    Extract the specified emotional appeal that was used in the post content.
+    Rereate the emotional elements and integrate {emotional_appeal} along with extracted analysis with the professional tone established in the reference post.
+  expected_output: >
+    Incorporate emotional elements into the content, including:
+    - Emotional triggers aligned with the specified appeal
+    - Phrases that evoke the desired emotional response
+    - Overall tone that matches the intended emotional appeal and the reference post's style
+    - Use the similar level of professionalism as in the reference most.
+    - Only create and use emojis if they exist in the reference post.
+    
+content_optimization:
+  description: >
+    Optimize the post for visibility and performance on LinkedIn using your knowledge of content optimization strategies.
+    Analyze the current content to suggest relevant keywords that could improve visibility.
+    Predict the potential performance of the post based on its content, structure, and alignment with LinkedIn best practices.
+    Ensure the post length matches the reference post's length as closely as possible.
+    Include hashtags only if present in the reference post, and in a similar manner.
+    Use your understanding of LinkedIn's algorithm and content performance metrics to guide your optimization.
+  expected_output: >
+    An optimized version of the LinkedIn post, featuring:
+    - A list of relevant keywords that could enhance visibility, integrated naturally into the content
+    - Suggestions for hashtags (if used in the reference post) that align with the content and could boost reach
+    - Analysis of the post's potential performance, including:
+      * Predicted engagement metrics (e.g., likes, comments, shares)
+      * Reasons for the predictions based on content quality, relevance, and structure
+    - Recommendations for improving the post's performance, if any
+    - Confirmation that the post length closely matches the reference post
+    - Explanation of how the optimizations align with LinkedIn's best practices and algorithm preferences
+
+final_evaluation_refinement:
+  description: >
+    Perform a comprehensive content quality check on the current version of the LinkedIn post.
+    Analyze the post for grammar, readability, clarity, and professional tone.
+    Evaluate how well the post aligns with the provided organizational context and topic of interest.
+    Assess the post's adherence to the reference post's style and {organization_name}'s voice.
+    Check that the emotional appeal and informational content are well-balanced.
+    Verify that the post could believably come from an industry expert.
+    Ensure no elements are present that weren't in the reference post.
+    Based on your analysis, provide specific recommendations for improvements.
+    Implement the suggested refinements to produce a final, polished version of the post.
+  expected_output: >
+    A detailed evaluation report including:
+    - Assessment of grammar, readability, and clarity
+    - Analysis of professional tone and alignment with {organization_name}'s voice
+    - Evaluation of content relevance to {topic_of_interest} and organizational context
+    - Check for balance between emotional appeal and informational content
+    - Verification of authenticity as an industry expert post
+    - List of specific recommendations for improvements
+
+    Followed by:
+    A polished, final version of the LinkedIn post, incorporating all refinements, including:
+    - Corrected grammar and improved readability
+    - Enhanced clarity and conciseness
+    - Refined messaging for maximum impact
+    - Optimized structure for LinkedIn's platform
+    - Confirmation of alignment with the reference post's style and {organization_name}'s voice
+    - Verification that all content is relevant to {topic_of_interest} and the given organizational context
